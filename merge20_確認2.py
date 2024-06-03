@@ -115,6 +115,8 @@ def main():
                 del st.session_state["text_list"]
                 del st.session_state["image_done"]
                 del st.session_state['count']
+            st.write("") 
+            st.subheader("下の「次の段階へ」のボタンを押してください")    
             st.button("次の段階へ", on_click=change_page2)            
             
         else:     
@@ -130,6 +132,8 @@ def main():
                 del st.session_state["text_list"]
                 del st.session_state["image_done"]
                 st.session_state['start_index'] += 8
+            st.write("")     
+            st.subheader("下の「次へ」のボタンを押してください")     
             st.button("次へ", on_click=change_page)
 
 if selector == "stepA":
@@ -205,7 +209,9 @@ elif selector == "stepB":
                     del st.session_state["text_list"]
                     del st.session_state["image_done"]
                     del st.session_state['count']
-                st.button("次の段階へ", on_click=change_page3)
+                st.write("")     
+                st.subheader("下の「結果を見る」のボタンを押してください")     
+                st.button("結果を見る", on_click=change_page3)
             else:     
                 def change_page4():
                     for i in range(1):
@@ -219,6 +225,8 @@ elif selector == "stepB":
                     del st.session_state["text_list"]
                     del st.session_state["image_done"]
                     st.session_state['start_index_step2'] += 8
+                st.write("") 
+                st.subheader("下の「次へ」のボタンを押してください")     
                 st.button("次へ", on_click=change_page4)
         
     st.title("マージソートと順位法を組み合わせた官能評価アルゴリズム")
