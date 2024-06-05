@@ -229,7 +229,7 @@ elif selector == "stepB":
                 st.subheader("下の「次へ」のボタンを押してください")     
                 st.button("次へ", on_click=change_page4)
         
-    st.title("マージソートと順位法を組み合わせた官能評価アルゴリズム")
+    st.title("サンプルアプリ（ミニトマト20個の評価）")
     st.subheader("一番品質が良いと思うものを選び続けてください")
     
     stepB_list = []
